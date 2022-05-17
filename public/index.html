@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>后台管理平台</title>
+
+
+    <!-- 原版Cesium引入 -->
+    <script  src="https://cdn.jsdelivr.net/npm/geotiff" > </script>
+    <script src="./Cesium/Cesium.js"></script>
+    <link rel="stylesheet" href="./Cesium/Widgets/widgets.css">
+    <!-- 超图版Cesium引入 -->
+    <!-- <script src="./SuperMapCesium/Cesium.js"></script>
+    <link rel="stylesheet" href="./SuperMapCesium/widgets.css">
+    <script src="./SuperMap/SuperMap.Include.js"></script>
+    <script src="./SuperMap/SuperMap-7.1-11828.js"></script>
+    <script src="./SuperMap/zh-CN.js"></script> -->
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+
+  <script>
+    console.log(GeoTIFF,'GeoTIFF');
+  </script>
+
+</html>

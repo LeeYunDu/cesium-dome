@@ -1,0 +1,9 @@
+const defaultSettings = require('@/settings')
+const title = defaultSettings.title || 'Vue Admin Template'
+
+export default function getPageTitle(pageTitle) {
+  if (pageTitle) {
+    return `${pageTitle}`
+  }
+  return `${title}`
+}

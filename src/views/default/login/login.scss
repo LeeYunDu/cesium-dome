@@ -1,0 +1,224 @@
+/* 修复input 背景不协调 和光标变色 */
+
+/* Detail see https://github.com/PanJiaChen/vue-element-admin/pull/927 */
+
+$bg:#283443;
+$light_gray:#ffffff;
+$cursor: #ffffff;
+
+@supports (-webkit-mask: none) and (not (cater-color: $cursor)) {
+  .login-container .el-input input {
+    color: $cursor;
+  }
+}
+
+/* reset element-ui css */
+.login-container {
+  .el-input {
+    display: inline-block;
+    height: 47px;
+    width: 85%;
+
+    input {
+      background: transparent;
+      border: 0;
+      -webkit-appearance: none;
+      border-radius: 0;
+      padding: 12px 5px 12px 15px;
+      color: #4a6797;
+      margin-left: 5px;
+      height: 47px;
+      // caret-color: $cursor;
+
+      &:-webkit-autofill {
+        box-shadow: 0 0 0 1000px #f0f0f0  inset !important;
+        // -webkit-text-fill-color: $cursor !important;
+      }
+    }
+  }
+
+  .el-form-item {
+    //   border: 1px solid #e2e9f1;
+    //   background: #f4f7fc;
+    //   border-radius: 5px;
+    //   color: #4a6797;
+    border-bottom: 1px solid #cfd9e9;
+  }
+}
+.login-form .el-tabs__nav {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+}
+.login-form .el-tabs__item.is-active {
+  color: #0072ff;
+}
+.login-form .el-tabs__content {
+  padding: 0 40px;
+}
+.login-form .el-tabs__item {
+  padding: 0;
+  flex: 1;
+  color: #090f17;
+  font-size: 16px;
+  text-align: center;
+  font-family: SourceHanSansCN-Medium, sans-serif;
+  font-weight: bold;
+  font-stretch: normal;
+}
+.login-form .el-tabs__active-bar {
+  background-color: #0072ff;
+}
+.login-form .el-radio {
+  font-family: SourceHanSansCN-Light, sans-serif;
+  font-stretch: normal;
+  font-weight: bold;
+}
+.login-form .el-button {
+  border: none;
+  height: 40px;
+  line-height: 40px;
+  padding: 0;
+  color: #ffffff;
+  font-weight: bold;
+  font-stretch: normal;
+  background: #0072ff;
+}
+.get-code .el-button {
+  border-radius: 0;
+  position: absolute;
+  right: 10px;
+  top: -6px;
+  font-size: 16px;
+  cursor: pointer;
+  user-select: none;
+}
+.login-container .el-dialog {
+  border-radius: 6px;
+  box-shadow: 0 5px 10px 0
+    #929292;
+  background-color: #f0f0f0;
+  font-family: SourceHanSansCN-Medium, sans-serif;
+  .el-dialog__header {
+    border-radius: 6px 6px 0 0;
+    padding: 5px 20px;
+    background-image: linear-gradient(
+      90deg,
+      #179ce9 0%,
+      #1ddcca 100%
+    ),
+      linear-gradient(
+      #0072ff,
+      #0072ff
+    );
+  }
+  .el-dialog__body {
+    padding: 10px;
+  }
+}
+.el-icon-s-custom {
+  color: #413e3e;
+  font-size: 25px;
+  padding-left: 3px;
+}
+.icon-bg {
+  position: absolute;
+  top: 5px;
+  background-color: #ffffff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.username {
+  padding-left: 45px;
+  color: #ffffff;
+  font-weight: bold;
+}
+.block {
+  position: absolute;
+  top: 6px;
+  width: 0;
+  height: 0;
+  font-size: 20px;
+  color: #ffffff;
+  // border-top: 15px solid #0072ff;
+  // border-left: 11px solid transparent;
+  // border-right: 11px solid transparent;
+}
+.button-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  .button-item {
+    flex: 0 0 1;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    .el-button {
+      margin: 0;
+    }
+  }
+  .button-item:hover {
+    .el-button {
+      background: #409eff;
+      color: white !important;
+    }
+    // box-shadow: 4px 4px 4px #333;
+  }
+  .dept-button :hover {
+    box-shadow: 5px #999999;
+  }
+  .dept-button {
+    border-radius: 10px;
+    // width: 160px;
+    // height: 80px;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    line-height: 24px;
+    letter-spacing: 0;
+    background-color: #ffffff;
+    color: #0072ff;
+    white-space: normal;
+    margin: 0 10px 10px 0;
+    vertical-align: middle;
+  }
+}
+// .choose-dept-dialog .el-dialog__header{
+//   padding: 5px 10px;
+// }
+.header-title .el-dropdown-link {
+  width: 186px;
+  position: absolute;
+  top: -23px;
+  left: -189px;
+  height: 32px;
+  text-align: right;
+}
+.header-title .label {
+  font-size: 14px;
+}
+.login-container .el-tabs__header {
+  margin: 0;
+}
+.login-container .el-dialog__headerbtn {
+  top: 8px;
+  right: 13px;
+}
+.white-bg {
+  background: white;
+  flex: 0 0 100%;
+  padding: 0 4.5%;
+  border-radius: 10px;
+  background-image: url('~@/assets/login/login_form_bg.png');
+  background-repeat: no-repeat;
+  background-position: 10% center;
+  background-size: 46%;
+  position: absolute;
+  height: 70%;
+  left: 5.9%;
+  right: 5.9%;
+  top: 50%;
+  transform: translateY(-50%);
+  min-width: 1280px;
+}

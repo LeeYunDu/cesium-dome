@@ -1,0 +1,70 @@
+$test:red;
+
+// 侧边导航栏
+$sideBarWidth: 210px;
+$sidebarShadow: 0 0 2px rgba(86, 86, 86, 0.1);
+// 顶部导航栏
+$navBarHeight:60px;
+
+// sidebar
+$sidebarShadow: 0 0 2px rgba(86, 86, 86, 0.1);
+// normal start
+$menuText:#556374;
+$menuActiveText:#409eff;
+$menuActiveBg: #4f82fb;
+$subMenuActiveText:#556374; //https://github.com/ElemeFE/element/issues/12951
+
+$menuBg:#f8fcff;
+$menuHover:linear-gradient(to right, #73a1fb, #3cc6fd);
+
+$subMenuBg:#f4f8fb;
+$subMenuHover:#ebf1ff;
+// normal end
+
+// topmenu start
+$topmenuText:#556374;
+$topmenuActiveText:#ffffff;
+$topmenuActiveBg: #4f82fb;
+$subTopmenuActiveText:#556374; //https://github.com/ElemeFE/element/issues/12951
+
+$topmenuBg:#ffffff;
+$topmenuHover:#ebf1ff;
+
+$subTopmenuBg:#f4f8fb;
+$subTopmenuHover:#ebf1ff;
+// topmenu end
+
+// dark start
+$darkmenuText:#bfcbd9;
+$darkmenuActiveText:#409eff;
+$darksubMenuActiveText:#f4f4f5; //https://github.com/ElemeFE/element/issues/12951
+
+$darkmenuBg:#263142;
+$darkmenuHover:#1d2733;
+
+$darksubMenuBg:#1d2733;
+$darksubMenuHover:#1d2733;
+// dark end
+
+$sideBarWidth: 210px;
+
+// the :export directive is the magic sauce for webpack
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+:export {
+  sidebarshadow: $sidebarShadow;
+  sidebarwidth: $sideBarWidth;
+  menutext: $menuText;
+  menuactivetext: $menuActiveText;
+  submenuactivetext: $subMenuActiveText;
+  menubg: $menuBg;
+  menuhover: $menuHover;
+  submenubg: $subMenuBg;
+  submenuhover: $subMenuHover;
+  darkmenutext: $darkmenuText;
+  darkmenuactivetext: $darkmenuActiveText;
+  darksubmenuactivetext: $darksubMenuActiveText;
+  darkmenubg: $darkmenuBg;
+  darkmenuhover: $darkmenuHover;
+  darksubmenubg: $darksubMenuBg;
+  darksubmenuhover: $darksubMenuHover;
+}
